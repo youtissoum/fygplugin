@@ -14,6 +14,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.*;
+import java.util.logging.Level;
 
 public final class Fygplugin extends JavaPlugin {
 
@@ -32,7 +33,7 @@ public final class Fygplugin extends JavaPlugin {
         LocksStorage.get().options().copyDefaults(true);
         LocksStorage.save();
 
-        Updater updater = new Updater(this, this.getFile(), "https://dl.dropboxusercontent.com/", "s/qc2v0jx1sznukrt/fygplugin.jar?dl=0");
+        Updater updater = new Updater(this, this.getFile(), "youtissoum", "fygplugin");
 
         getLogger().info("Plugin started !");
         getServer().getPluginManager().registerEvents(new EventListener(this), this);
@@ -48,23 +49,22 @@ public final class Fygplugin extends JavaPlugin {
         getCommand("spawnwitherskeleton").setExecutor(new WitherSkeletonCommand());
         getCommand("coords").setExecutor(new CoordCommand());
         getCommand("lockChest").setExecutor(new LockCommand(this));
-        getCommand("imadeanewfygpluginupdatesocanyoudownloaditpleaselolitwouldbecoolabcdefghijklmnopqrstuvwxyz0123456789+-*/nevergonnagiveyouupnevergonnaletyoudownneverrunaroundandhurtyousoooooooooooooothanksbyebroorgirlidkdependsonwhoisreadingthislol").setExecutor(new UpdateCommand(updater));
+        getCommand("updatefygplugin").setExecutor(new UpdateCommand(updater));
         getCommand("disguise").setExecutor(new DisguiseCommand(this));
         getCommand("mute").setExecutor(new MuteCommand(this));
 
         getCommand("sethome").setExecutor(new HomeCommand(this));
         getCommand("home").setExecutor(new HomeCommand(this));
 
-        getLogger().info(getChangelog());
+        getLogger().log(Level.INFO, getChangelog());
     }
 
     public String getChangelog() {
         String output = "";
 
-        output += "\nFygplugin v1.0.4 Changelog\n\n";
+        output += "\nFygplugin " + this.getDescription().getVersion() + " Changelog\n\n";
         output += "------------------------------\n\n";
-        output += "+ Added a changelog\n";
-        output += "+ Added the mute command\n\n";
+        output += "+ Changed the updater to use github instead of dropbox\n\n";
         output += "------------------------------\n";
 
         return output;
