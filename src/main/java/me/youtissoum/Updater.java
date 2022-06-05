@@ -57,6 +57,8 @@ public class Updater {
     }
 
     private void downloadFile() {
+        // hello
+
         BufferedInputStream in = null;
         FileOutputStream fout = null;
         try {
