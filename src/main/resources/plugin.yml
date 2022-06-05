@@ -1,0 +1,55 @@
+name: Fygplugin
+version: '${project.version}'
+main: me.youtissoum.fygplugin.Fygplugin
+api-version: 1.18
+authors: [ youtissoum ]
+description: This is a plugin the fyg cafe minecraft server
+commands:
+  norain:
+    description: remove rain (client side)
+  fygcafebad:
+    description: say a lie
+  sethome:
+    description: set a home (you only have one tho)
+  home:
+    description: teleport to your home
+  feed:
+    description: feed yourself lol
+  suicide:
+    description: ...
+  vanish:
+    description: become invisible to random players
+    permission: fygplugin.vanish
+    permission-message: Did you really think you would be able to do this ?
+    usage: /<command> [on/off]
+  votekick:
+    description: Vote to kick someone
+    usage: /<command> {Player}
+  restoreitemdur:
+    description: restores the item durability
+  nick:
+    description: Give yourself a nickname
+    usage: /<command> {Name}
+    permission: fygplugin.nick
+  reset:
+    description: /suicide but you respawn at the same place
+  spawnwitherskeleton:
+    description: yes
+    usage: /<command>
+  coords:
+    description: See, copy or share your coords
+    usage: /<command>
+  lockChest:
+    description: Lock a chest
+    usage: /<command>
+  imadeanewfygpluginupdatesocanyoudownloaditpleaselolitwouldbecoolabcdefghijklmnopqrstuvwxyz0123456789+-*/nevergonnagiveyouupnevergonnaletyoudownneverrunaroundandhurtyousoooooooooooooothanksbyebroorgirlidkdependsonwhoisreadingthislol:
+    description: don't use it, it won't do anything for you
+    permission: fygplugin.update
+  disguise:
+    description: disguise lol
+    usage: /<command> [enable/disable] [entity]
+    permission: fygplugin.disguise
+  mute:
+    description: Mute someone
+    usage: /<command> [player] [on|off]
+    permission: fygplugin.mute
