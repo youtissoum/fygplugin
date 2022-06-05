@@ -42,7 +42,7 @@ commands:
   lockChest:
     description: Lock a chest
     usage: /<command>
-  imadeanewfygpluginupdatesocanyoudownloaditpleaselolitwouldbecoolabcdefghijklmnopqrstuvwxyz0123456789+-*/nevergonnagiveyouupnevergonnaletyoudownneverrunaroundandhurtyousoooooooooooooothanksbyebroorgirlidkdependsonwhoisreadingthislol:
+  updatefygplugin:
     description: don't use it, it won't do anything for you
     permission: fygplugin.update
   disguise:
